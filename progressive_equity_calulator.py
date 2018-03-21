@@ -218,23 +218,23 @@ def progressive_payout(exit_price, fin_independence, equity_holders, tax):
 
 
 #-------------------------------------------------------------------------------
-if __name__ == '__main__':
-
-    exit_price = 200
-    fin_independence = 30
-    tax = .5
-
-    equity_holders_definitions = ['Equity Percent [0]', 'Subject to Progressive [1]', 'Triggered [2]',
-                                 'Employed [3]', 'Payout [4]']
-
-    equity_holders = {'angel1' :  [.1, False, False, False, 0 ],
-                     'venture1':  [.1, False, False, False, 0],
-                     'founder1':  [.25, True, False, True, 0],
-                     'founder2':  [.25, True, False, True, 0],
-                     'employee1': [.1, True, False, True, 0],
-                     'employee2': [.1, True, False, False, 0],
-                     'employee3': [.05, True, False, True, 0],
-                     'employee4': [.05, True, False, False, 0]}
-
-    equity_holders = progressive_payout(exit_price, fin_independence,
-                                        equity_holders, tax)
+# if __name__ == '__main__':
+#
+#     exit_price = 50
+#     fin_independence = 30
+#     tax = .5
+# 
+#     equity_holders_definitions = ['Equity Percent [0]', 'Subject to Progressive [1]', 'Triggered [2]',
+#                                  'Employed [3]', 'Payout [4]']
+#
+#     equity_holders = {'angel1' :  [.1, False, False, False, 0 ],
+#                      'venture1':  [.1, False, False, False, 0],
+#                      'founder1':  [.25, True, False, True, 0],
+#                      'founder2':  [.25, True, False, True, 0],
+#                      'employee1': [.1, True, False, True, 0],
+#                      'employee2': [.1, True, False, False, 0],
+#                      'employee3': [.05, True, False, True, 0],
+#                      'employee4': [.05, True, False, False, 0]}
+#
+#     equity_holders = progressive_payout(exit_price, fin_independence,
+#                                         equity_holders, tax)
