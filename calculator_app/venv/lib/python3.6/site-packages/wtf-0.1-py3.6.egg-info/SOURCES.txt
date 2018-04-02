@@ -1,0 +1,13 @@
+AUTHORS
+INSTALL
+LICENSE
+MANIFEST.in
+README
+setup.cfg
+setup.py
+wtf/__init__.py
+wtf.egg-info/PKG-INFO
+wtf.egg-info/SOURCES.txt
+wtf.egg-info/dependency_links.txt
+wtf.egg-info/top_level.txt
+wtf.egg-info/zip-safe
