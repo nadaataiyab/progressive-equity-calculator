@@ -19,7 +19,8 @@ monies distributed from the kicker pool.
 import pandas as pd
 from collections import defaultdict
 
-EQUITY_HOLDERS_DEFINITIONS = ['Equity Percent [0]',
+EQUITY_HOLDERS_DEFINITIONS = ['Equity Names',
+                              'Equity Percent [0]',
                               'Subject to Progressive [1]',
                               'Triggered [2]',
                               'Employed [3]',
@@ -145,17 +146,21 @@ def distribute_pool(pool, equity_holders, fin_independence,
 
     return pool, equity_holders
 
-def create_dataframe(equity_holders, definitions=EQUITY_HOLDERS_DEFINITIONS):
-    
-    pass
+def create_dataframe(equity_holders, equity_holders_definitions=EQUITY_HOLDERS_DEFINITIONS):
+
+    df_equity_holders = pd.DataFrame.from_dict(equity_holders, 'index')
+    df_equity_holders.reset_index(inplace=True)
+    df_equity_holders.columns = equity_holders_definitions
+    return df_equity_holders
 
 
 
 def progressive_payout(exit_price, fin_independence, tax,
-                       equity_names, equity_percent, progressive, employed):
+                       equity_names, equity_percent, progressive, employed,
+                       equity_holders_definitions):
     '''
     '''
-   
+
 
     equity_holders = parse_input(equity_names, equity_percent, progressive, employed)
 
@@ -173,16 +178,18 @@ def progressive_payout(exit_price, fin_independence, tax,
 
         pool, equity_holders = distribute_pool(pool, equity_holders, fin_independence,
                             equity_denominator, recipients)
+        df_equity_holders = create_dataframe(equity_holders, equity_holders_definitions)
 
-        return message, pool, equity_holders
+        return message, pool, df_equity_holders
 
     else:
-        return message, pool, equity_holders
+        df_equity_holders = create_dataframe(equity_holders, equity_holders_definitions)
+        return message, pool, df_equity_holders
 
 
 
 
-# #-------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 # if __name__ == '__main__':
 #
 #     exit_price = 200
@@ -193,7 +200,7 @@ def progressive_payout(exit_price, fin_independence, tax,
 #     progressive =  "False, False, True, True, True, True, True, True"
 #     employed = "False, False, True, True, True, False, True, False"
 #
-#     equity_holders_definitions = ['Equity Percent [0]', 'Subject to Progressive [1]', 'Triggered [2]',
+#     equity_holders_definitions = ['Name', 'Equity Percent [0]', 'Subject to Progressive [1]', 'Triggered [2]',
 #                                  'Employed [3]', 'Payout [4]', 'Standard Payout [5]']
 #
 #     # equity_holders = {'angel1' :  [.1, False, False, False, 0, 0 ],
@@ -207,11 +214,14 @@ def progressive_payout(exit_price, fin_independence, tax,
 #
 #     message, pool, equity_holders = progressive_payout(exit_price, fin_independence,tax,
 #                                                        equity_names, equity_percent,
-#                                                        progressive, employed)
+#                                                        progressive, employed,
+#                                                        equity_holders_definitions)
 #
 #     print(message)
 #
 #     print(pool)
 #
-#     for name, data in equity_holders.items():
-#           print(name, ':', data)
+#     print(equity_holders)
+
+    # for name, data in equity_holders.items():
+    #       print(name, ':', data)
