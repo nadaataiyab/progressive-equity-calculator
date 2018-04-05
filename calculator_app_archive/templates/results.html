@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='styles.css') }}"/>
+  <title>Progressive Equity Calculator Results</title>
+</head>
+
+<body>
+  <h1>Progressive Equity Payout Calculations</h1>
+  <p>Here are the estimated payouts for each equity holder under a <br>
+    progressive equity scheme, using the assumptions you inputted.</p>
+
+    <h4>
+      {{ message }}
+    </h4>
+  <table border='1px solid black' cellpadding="10">
+    <col width='250'>
+    <col width='100'>
+      <tablebody>
+        <tr>
+          <td>Exit Price:</td>
+          <td>${{ exit_price }}</td>
+        </tr>
+        <tr>
+          <td>Financial Independence Number:</td>
+          <td>${{ fi_num }}</td>
+        </tr>
+        <tr>
+          <td>Equity Tax:</td>
+          <td>{{ tax }}%</td>
+        </tr>
+        <tr>
+          <td>Money Remaining in Pool:</td>
+          <td>${{ pool }}</td>
+        </tr>
+      </tablebody>
+    </table>
+    <p></p>
+    <p></p>
+
+    <div>
+    {{ equity_holders|safe }}
+    </div>
+
+</body>
+
+</html>
