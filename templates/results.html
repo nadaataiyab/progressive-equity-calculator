@@ -18,10 +18,12 @@
 
     <h1>Payout Calculations</h1>
 
-    <p>Here are the estimated payouts for each equity holder under a <br>
+    <p>Here are the estimated payouts for each equity holder under a
       progressive equity scheme, using the assumptions you inputted.</p>
-
-    <div>{{ message }}</div>
+    <p>Note that in cases of an extremely large exit with very few employees,
+      you may have money leftover in the kicker pool after the redistribution.
+      That leftover amount is displayed in the box below under "Money Remaining in Pool."
+    <p>{{ message }}</p>
 
     <table class="summary">
       <col width='250'>
@@ -47,9 +49,25 @@
       </table>
       <p></p>
       <p></p>
+      <p></p>
+      <h4>Results Table</h4>
+      <p>
+        "Name": Name of individual/group specified on input page<br>
+        "Equity Stake": Amount of equity owned<br>
+        "Triggered": paid the equity tax True/False<br>
+        "Employed": employed at time of exit True/False<br>
+        "Standard Payout": amount received without progressive equity.<br>
+        "Progressive Equity": amount received with progressive equity.<br>
+      </p>
 
       <div>
       {{ equity_holders|safe }}
+      </div>
+
+      <div>
+        <form method="get" action="/">
+          <button type=submit>Try Again</button>
+        </form>
       </div>
 
       <footer>

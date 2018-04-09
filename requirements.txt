@@ -1,2 +1,5 @@
+#Originally generated using pip freeze > requirements.txt
+#Then removed all packages except for the ones listed below.
+
 Flask==0.12.2
 pandas==0.20.1

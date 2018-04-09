@@ -18,10 +18,9 @@
 
     <h1>Progressive Equity Calculator</h1>
 
-    <p>This tool estimates the payouts that founders and employees would receive<br>
-      in an exit under a progressive equity scheme. The idea behind progressive <br>
-      equity is to allow founders and early employees to share some of the wealth <br>
-      created by a big exit with employees that have smaller holdings.
+    <p>This tool calculates potential payouts to founders and employees under a progressive equity
+      scheme. The idea behind progressive equity is to allow founders and early employees to share
+      wealth created by a very large exit with employees that have smaller holdings.
     </p>
     <p>It was popularized in this article by Groupon's co-founder, Andrew Mason:<br>
   <a href="https://medium.com/detour-dot-com/introducing-progressive-equity-f424a51ee3a4">
@@ -30,13 +29,26 @@
   Hacker News Thread</a> on the subject.
 
       <h3>How it Works</h3>
-      <p>Once a founder and/or employee has reached a pre-set "financial independence number",<br>
-        additional earnings are taxed (usually 50%) and put into a kicker pool. This pool<br>
-        is then redistributed to the remaining employees on a pro-rate basis.<br>
+      <p>Once a founder and/or employee has reached a pre-set "financial independence number",
+        additional earnings are taxed (usually at 50%) and put into a kicker pool. This pool
+        is distributed to the remaining employees on a pro-rata basis.
       </p>
-      <p>In order to receive monies from the kicker pool, an individual must still be <br>
-        an employee at the time of the exit. Former employees will be subject to the<br>
-        tax, but not the redistribution. Investors are not subject to progressive equity.
+      <p>For example, if the "financial independence number" is set to $15mm and the company
+        sells for $100mm. A founder owning 25% of the company will receive $20mm
+        instead of $25mm. The remaining $5mm will fund the kicker pool and be distributed among the
+        rest of the employees.
+      </p>
+      <p>
+        As an employee your share of the kicker pool is equal to your equity holdings
+        divided by the total equity owned by all the eligible employees times the kicker pool.
+        For example if you owned 1% and all the eligible employees together owned 20%,
+        you would get 1/20th of the $5mm kicker pool, equal to $250,000, on top of the $1mm
+        you would otherwise receive in a $100mm exit.
+      </p>
+      <p>In order to receive monies from the kicker pool, an individual must still be
+        an employee at the time of the exit. Former employees will be subject to the
+        tax, but not the redistribution. Investors are not subject to progressive equity, unless
+        you somehow talked them into it.
       </p>
 
 
@@ -53,10 +65,10 @@
       </p>
       <p>
         <h4>Financial Independence Number</h4>
-        <p>Once a founder/employee reaches this number, additional earnings from<br>
-          will be taxed at the rate specified below. eg. If your number is $15mm<br>
-          and, with your equity, you would earn $18mm, $1.5mm will be put<br>
-          into a kicker pool and you will receive $16.5mm instead.</p>
+        <p>Once a founder/employee reaches this number, additional earnings
+          will be taxed at the rate specified below. eg. If your number is $15mm
+          and, with your equity, you would earn $18mm, $1.5mm will be put
+          into a kicker pool and you will earn $16.5mm.</p>
         <input
           type="number"
           name="fi_num"
@@ -64,7 +76,7 @@
       </p>
       <p>
         <h4>Equity Tax</h4>
-        <p>Earnings above the financial independence number will be taxed at<br>
+        <p>Earnings above the financial independence number will be taxed at
           this rate and put into the kicker pool. <b>Enter as a decimal eg.0.5</b>
         </p>
         <input
@@ -74,11 +86,11 @@
         </p>
       <p>
         <h4>Equity Holders</h4>
-          <p>Enter comma seperated list with the names of the equity holders.<br>
+          <p>Enter a comma seperated list with the names of the equity holders.<br>
             You can list each individual seperately:<br>
-            Example: investor_1, investor_2, founder_1, founder_2, employee_1,  employee_2,...<br><br>
-            Or you can group together the investors and employees with small holdings:<br>
-            Example: investors, founder_1, founder_2, employee_1, employees</p>
+            <i>Example: investor_1, investor_2, founder_1, founder_2, employee_1,  employee_2,...</i><br><br>
+            Or you can group people together such as, for example, the investors, founders, and employees with small holdings:<br>
+            <i>Example: investors, founders, employees</i></p>
           <input
             type="text"
             name="equity_names"
@@ -87,8 +99,8 @@
         </p>
         <p>
           <h4>Equity Stake</h4>
-            <p>Enter comma seperated list with the equity stake corresponding to each individual/group listed above.<br>
-              Example: 0.1, 0.1, 0.25, 0.25, 0.1, 0.1, 0.05, 0.05</p>
+            <p>Enter a comma seperated list with the equity stake corresponding to each individual/group listed above.<br>
+            </p>
             <input
               type="text"
               name="equity_percent"
@@ -98,9 +110,8 @@
         </p>
           <p>
             <h4>Subject to Progressive Equity</h4>
-              <p>Specify True/False whether the person/group could be subject to progressive equity tax.<br>
+              <p>Specify True/False whether the person/group will be subject to the progressive equity tax.<br>
                 Generally, investors will always be listed as False and employees/founders as True.<br>
-                Example: False, False, True, True, True, True, True, True
             </p>
             <input
               type="text"
@@ -113,7 +124,6 @@
               <h4>Currently Employed</h4>
                 <p>Specify True/False whether the person/group is currently employed.<br>
                   Only employees are eligible to receive a redistribution. Set investors to False.<br>
-                  Example: False, False, True, True, True, False, True, False
               </p>
           <p>
         <input

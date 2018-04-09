@@ -78,11 +78,9 @@ def check_equity_balance(equity_holders):
         message = ("Total equity = " + str(total_equity))
         return message
 
-
-
 def round_1(equity_holders, exit_price, fin_independence, tax):
     '''
-    Calulates payouts from the first round of distribution.
+    Calculates payouts from the first round of distribution.
     Any equity holders that exceed the finanical independence number contributes
     a portion of the excess funds (usually 50%) into a pool.
 
@@ -147,10 +145,15 @@ def distribute_pool(pool, equity_holders, fin_independence,
     return pool, equity_holders
 
 def create_dataframe(equity_holders, equity_holders_definitions=EQUITY_HOLDERS_DEFINITIONS):
+    '''
+    Transforms dictionary containing data on equity holders into a pandas dataframe.
 
+    '''
+    pd.options.display.float_format = '${:,.2f}'.format
     df_equity_holders = pd.DataFrame.from_dict(equity_holders, 'index')
     df_equity_holders.reset_index(inplace=True)
     df_equity_holders.columns = equity_holders_definitions
+    df_equity_holders['Equity Stake'] = df_equity_holders['Equity Stake'].map(lambda x: "{0:.1f}%".format(x*100))
     return df_equity_holders
 
 
@@ -159,6 +162,7 @@ def progressive_payout(exit_price, fin_independence, tax,
                        equity_names, equity_percent, progressive, employed,
                        equity_holders_definitions):
     '''
+    Calculates progressive equity payouts.
     '''
 
 
