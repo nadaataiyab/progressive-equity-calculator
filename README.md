@@ -4,3 +4,10 @@ A simple program written in Python to help companies project pay-outs from a pro
 <h3>Tech Summary</h3>
 This app was built with Python, Flask and Pandas. I created my own Docker image
 using Ubuntu 
+
+
+'''
+docker pull nadaataiyab/pe-calculator:latest
+
+docker run -p 5000:5000 nadaataiyab/pe-calculator:latest
+'''
