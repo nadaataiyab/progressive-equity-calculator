@@ -16,7 +16,6 @@ Check out this blog post: <a href=https://medium.com/detour-dot-com/introducing-
 
 The app was deployed on AWS Elastic Beanstalk. Blog post with the details coming soon!
 
-
 ### Use Docker to Run the Program
 
 To run this program using Docker, using two simple commands:
@@ -48,5 +47,6 @@ docker run -p [file path to the project files on your computer]:/app nadaataiyab
 ```python
 python application.py
 ```
-
+### Contribute!
+This is an open source project. Please feel free to fork the repo and make a pull request and/or provide feedback on how to improve the app. 
 
