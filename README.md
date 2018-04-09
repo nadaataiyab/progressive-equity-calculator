@@ -44,16 +44,16 @@ docker run -p [file path to the project files on your computer]:/app nadaataiyab
 1. Ensure that you have installed python, flask, and pandas
 2. Go to the root director of the app
 3. Use the following command:
-```python
+```
 python application.py
 ```
 ### Contribute!
 This is an open source project. Please feel free to fork the repo and make a pull request and/or provide feedback on how to improve the app. 
 
 ### Get in Touch
-      <a href="https://github.com/nadaataiyab/progressive-equity-calculator">Github</a> |
-      <a href="https://hub.docker.com/r/nadaataiyab/pe-calculator/">Docker Hub</a> |
-      <a href="https://twitter.com/nadaaita">Twitter</a> |
-      <a href="https://www.linkedin.com/in/nadaataiyab">LinkedIn</a> |
-      <a href="https://www.medium.com/@nadaa.taiyab">Medium Blog</a> 
+<a href="https://github.com/nadaataiyab/progressive-equity-calculator">Github</a> |
+<a href="https://hub.docker.com/r/nadaataiyab/pe-calculator/">Docker Hub</a> |
+<a href="https://twitter.com/nadaaita">Twitter</a> |
+<a href="https://www.linkedin.com/in/nadaataiyab">LinkedIn</a> |
+<a href="https://www.medium.com/@nadaa.taiyab">Medium Blog</a> 
 
