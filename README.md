@@ -50,3 +50,10 @@ python application.py
 ### Contribute!
 This is an open source project. Please feel free to fork the repo and make a pull request and/or provide feedback on how to improve the app. 
 
+### Get in Touch
+      <a href="https://github.com/nadaataiyab/progressive-equity-calculator">Github</a> |
+      <a href="https://hub.docker.com/r/nadaataiyab/pe-calculator/">Docker Hub</a> |
+      <a href="https://twitter.com/nadaaita">Twitter</a> |
+      <a href="https://www.linkedin.com/in/nadaataiyab">LinkedIn</a> |
+      <a href="https://www.medium.com/@nadaa.taiyab">Medium Blog</a> 
+
