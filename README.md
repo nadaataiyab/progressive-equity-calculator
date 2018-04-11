@@ -3,6 +3,7 @@ A simple program written in Python to explore pay-out scenarios from a progressi
 
 This concept was popularized by one of the co-founders of Groupon, who reasoned that after a certain amount of money or the "financial independence threshold", a portion of the earnings from a large exit should be shared with the many employees who made huge contributions, but owned far less equity. 
 
+### View it Live
 The <a href=http://pe-calculator.us-west-2.elasticbeanstalk.com/>progressive equity calculator</a> is available online and explains the genesis of the project.  
 
 ### Learn More about Progressive Equity
