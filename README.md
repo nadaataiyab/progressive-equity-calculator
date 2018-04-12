@@ -38,7 +38,7 @@ docker run -p 5000:5000 nadaataiyab/pe-calculator:latest
 To edit the files locally and have the changes update in real time on the Docker container, mount the folder in which you saved the files when you run the Docker container using this command:
 
 ```
-docker run -p [file path to the project files on your computer]:/app nadaataiyab/pe-calculator
+docker run -p 5000:5000 -v [file path to the project files on your computer]:/app nadaataiyab/pe-calculator
 ```
 
 ### Run the program in your local environment
